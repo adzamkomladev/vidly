@@ -60,6 +60,18 @@ app.put("/api/genres/:id", (req, res) => {
   res.status(204).send("Genre updated successfully");
 });
 
+app.delete("/api/genres/:id", (req, res) => {
+  const genre = genres.find((g) => g.id === +req.params.id);
+
+  if (!genre) {
+    return res.status(404).send("Genre not found");
+  }
+
+  genres = genres.filter((g) => g.id !== genre.id);
+
+  res.status(204).send("Genre deleted successfully");
+});
+
 const validateBody = (body) => {
   return Joi.object({
     name: Joi.string().min(3).max(50).required(),
