@@ -1,3 +1,4 @@
+const config = require('config');
 const express = require("express");
 
 // Routes
@@ -9,5 +10,5 @@ app.use(express.json());
 
 app.use('/api/genres', genres);
 
-const port = process.env.PORT || 3000;
+const port = config.get('port') || process.env.PORT;
 app.listen(port, () => console.log(`Vidly listening on port ${port}!`));
