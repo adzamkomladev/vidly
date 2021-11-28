@@ -1,10 +1,4 @@
-const mongoose = require("mongoose");
-
-const genreSchema = new mongoose.Schema({
-  name: { type: String, required: true, maxlength: 50, unique: true },
-});
-
-const Genre = mongoose.model("Genre", genreSchema);
+const Genre = require("../models/genre");
 
 module.exports.findAll = async () => await Genre.find();
 
