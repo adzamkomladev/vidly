@@ -46,6 +46,7 @@ router.get("/:id", async (req, res) => {
 
     res.send(genre);
   } catch (err) {
+    debug(err);
     res.status(500).send("Failed to retrieve genre");
   }
 });

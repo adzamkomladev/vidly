@@ -15,6 +15,7 @@ mongoose
 
 // Routes
 const genres = require("./routes/genres");
+const customers = require("./routes/customers");
 
 const app = express();
 
@@ -26,6 +27,7 @@ if (app.get('env') === 'development') {
 app.use(express.json());
 
 app.use('/api/genres', genres);
+app.use('/api/customers', customers);
 
 const port = config.get('port') || process.env.PORT;
 app.listen(port, () => debug(`Vidly listening on port ${port}...`));
