@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
 module.exports = Joi.object({
-  customerId: Joi.string().required(),
-  movieId: Joi.string().required(),
+  customerId: Joi.objectId().required(),
+  movieId: Joi.objectId().required(),
   dateBorrowed: Joi.date(),
 });
