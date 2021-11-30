@@ -1,4 +1,4 @@
-const Genre = require("../models/genre");
+const { Genre } = require("../models/genre");
 
 module.exports.findAll = async () => await Genre.find();
 
