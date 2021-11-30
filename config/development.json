@@ -2,6 +2,6 @@
   "name": "Vidly development application",
   "port": 3000,
   "db": {
-    "mongodb": "mongodb://localhost/vidly"
+    "mongodb": "mongodb://localhost/vidly&replicaSet=learnMongo"
   }
 }

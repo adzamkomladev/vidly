@@ -1,4 +1,4 @@
-const Movie = require("../models/movie");
+const { Movie } = require("../models/movie");
 const { Genre } = require("../models/genre");
 
 module.exports.findAll = async () =>

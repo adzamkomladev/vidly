@@ -1,4 +1,4 @@
-const Customer = require("../models/customer");
+const { Customer } = require("../models/customer");
 
 module.exports.findAll = async () => await Customer.find();
 
